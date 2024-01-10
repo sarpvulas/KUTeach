@@ -15,6 +15,9 @@
 		78F581592B4EE665003E2F42 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581582B4EE665003E2F42 /* Radius.swift */; };
 		78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815A2B4EE6F2003E2F42 /* ButtonDS.swift */; };
 		78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815C2B4EEC3A003E2F42 /* TextDS.swift */; };
+		78F5815F2B4EF129003E2F42 /* BackgroundDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815E2B4EF129003E2F42 /* BackgroundDS.swift */; };
+		78F581612B4EF95E003E2F42 /* TextFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581602B4EF95E003E2F42 /* TextFieldDS.swift */; };
+		78F581632B4EFBE2003E2F42 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581622B4EFBE2003E2F42 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		78F581582B4EE665003E2F42 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 		78F5815A2B4EE6F2003E2F42 /* ButtonDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDS.swift; sourceTree = "<group>"; };
 		78F5815C2B4EEC3A003E2F42 /* TextDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDS.swift; sourceTree = "<group>"; };
+		78F5815E2B4EF129003E2F42 /* BackgroundDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundDS.swift; sourceTree = "<group>"; };
+		78F581602B4EF95E003E2F42 /* TextFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDS.swift; sourceTree = "<group>"; };
+		78F581622B4EFBE2003E2F42 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 				78F581582B4EE665003E2F42 /* Radius.swift */,
 				78F5815A2B4EE6F2003E2F42 /* ButtonDS.swift */,
 				78F5815C2B4EEC3A003E2F42 /* TextDS.swift */,
+				78F5815E2B4EF129003E2F42 /* BackgroundDS.swift */,
+				78F581602B4EF95E003E2F42 /* TextFieldDS.swift */,
 			);
 			path = "Design System";
 			sourceTree = "<group>";
@@ -92,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				78F581432B4ED7DB003E2F42 /* LoginView.swift */,
+				78F581622B4EFBE2003E2F42 /* LoginViewModel.swift */,
 			);
 			path = "Login Page";
 			sourceTree = "<group>";
@@ -205,12 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F5815F2B4EF129003E2F42 /* BackgroundDS.swift in Sources */,
 				78F581442B4ED7DB003E2F42 /* LoginView.swift in Sources */,
 				78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */,
 				78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */,
+				78F581612B4EF95E003E2F42 /* TextFieldDS.swift in Sources */,
 				78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */,
 				78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */,
 				78F581592B4EE665003E2F42 /* Radius.swift in Sources */,
+				78F581632B4EFBE2003E2F42 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

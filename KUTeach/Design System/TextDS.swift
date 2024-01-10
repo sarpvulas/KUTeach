@@ -27,7 +27,7 @@ struct Heading1Text: View {
     var body: some View {
         Text(text)
             .font(.custom("SFProDisplay-Bold", size: 24)) // Example size and weight
-            .foregroundColor(.black)
+            .foregroundColor(.white)
             .lineLimit(nil)
     }
 }

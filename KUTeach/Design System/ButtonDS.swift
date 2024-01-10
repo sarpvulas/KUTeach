@@ -22,10 +22,15 @@ struct ButtonDS: View {
 
     var body: some View {
         Button(action: action) {
-
-            
-
-
+            Text(buttonTitle)
+                .font(.custom("SFProText-Regular", size: 16))
+                .foregroundColor(.blue)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
         }
+        .background(
+            RoundedRectangle(cornerRadius: Radius.radius_4) 
+                .fill(Color.white)
+        )
     }
 }
