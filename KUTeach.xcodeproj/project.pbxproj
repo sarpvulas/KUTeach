@@ -14,6 +14,7 @@
 		78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581562B4EE52A003E2F42 /* Spacing.swift */; };
 		78F581592B4EE665003E2F42 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581582B4EE665003E2F42 /* Radius.swift */; };
 		78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815A2B4EE6F2003E2F42 /* ButtonDS.swift */; };
+		78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815C2B4EEC3A003E2F42 /* TextDS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		78F581562B4EE52A003E2F42 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		78F581582B4EE665003E2F42 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 		78F5815A2B4EE6F2003E2F42 /* ButtonDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDS.swift; sourceTree = "<group>"; };
+		78F5815C2B4EEC3A003E2F42 /* TextDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				78F581562B4EE52A003E2F42 /* Spacing.swift */,
 				78F581582B4EE665003E2F42 /* Radius.swift */,
 				78F5815A2B4EE6F2003E2F42 /* ButtonDS.swift */,
+				78F5815C2B4EEC3A003E2F42 /* TextDS.swift */,
 			);
 			path = "Design System";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F581442B4ED7DB003E2F42 /* LoginView.swift in Sources */,
+				78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */,
 				78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */,
 				78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */,
 				78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */,

@@ -13,7 +13,7 @@ struct LoginView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Heading1Text(text:"Hello, world!")
         }
         .padding()
     }
