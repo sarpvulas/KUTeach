@@ -13,6 +13,7 @@ struct TextFieldDS: View {
 
     var body: some View {
         TextField(placeholder, text: $text)
+            .autocapitalization(.none)
             .padding(.horizontal, 10)
             .padding(.vertical, 8)
             .background(

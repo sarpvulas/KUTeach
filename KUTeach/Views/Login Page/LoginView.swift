@@ -9,8 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @State private var loginText: String = ""
+    @State private var usernameText: String = ""
     @State private var passwordText: String = ""
+    @State private var emailText: String = ""
 
     @StateObject private var viewModel = LoginViewModel()
 
@@ -37,21 +38,34 @@ struct LoginView: View {
                             Heading1Text(text: "Login Page")
                                 .padding()
 
-                            TextFieldDS(text: $loginText, placeholder: "Enter username")
+                            TextFieldDS(text: $emailText, placeholder: "Enter email")
                                            .padding()
-
+                            
+                            TextFieldDS(text: $usernameText, placeholder: "Enter username").padding()
+                            
                             TextFieldDS(text: $passwordText, placeholder: "Enter password")
                                            .padding()
 
-                            ButtonDS(buttonTitle: "Login", action: viewModel.login)
+                            //SecureField("Enter password", text: $passwordText).padding()
+
+                            ButtonDS(buttonTitle: "Login", action: {
+                                viewModel.login(withEmail: emailText, password: passwordText)
+                            })
+
+                            ButtonDS(buttonTitle: "Sign Up", action: {
+                                            viewModel.signUp(email: emailText, password: passwordText, username: usernameText)
+                                        }).padding()
 
 
                             Spacer()
                             Spacer()
                             Spacer()
+
+                            if let error = viewModel.error {
+                                            Text(error)
+                                                .foregroundColor(.red)
+                                        }
                         }
-
-
             }
         }
     }
