@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */; };
 		78EEE48A2B52C9EC00B00E9F /* StudentProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */; };
+		78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */; };
+		78EEE48F2B52D64400B00E9F /* Majors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48E2B52D64400B00E9F /* Majors.swift */; };
 		78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */; };
 		78F581442B4ED7DB003E2F42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581432B4ED7DB003E2F42 /* LoginView.swift */; };
 		78F581462B4ED7DC003E2F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F581452B4ED7DC003E2F42 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfilePageView.swift; sourceTree = "<group>"; };
 		78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewModel.swift; sourceTree = "<group>"; };
+		78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSubscriptionView.swift; sourceTree = "<group>"; };
+		78EEE48E2B52D64400B00E9F /* Majors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Majors.swift; sourceTree = "<group>"; };
 		78F5813E2B4ED7DB003E2F42 /* KUTeach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KUTeach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUTeachApp.swift; sourceTree = "<group>"; };
 		78F581432B4ED7DB003E2F42 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78EEE48B2B52D23800B00E9F /* Subscription Page */ = {
+			isa = PBXGroup;
+			children = (
+				78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */,
+			);
+			path = "Subscription Page";
+			sourceTree = "<group>";
+		};
 		78F581352B4ED7DB003E2F42 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				78F5818B2B52B2CA003E2F42 /* Video.swift */,
+				78EEE48E2B52D64400B00E9F /* Majors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +182,7 @@
 		78F581552B4EE20D003E2F42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78EEE48B2B52D23800B00E9F /* Subscription Page */,
 				78F5818D2B52B560003E2F42 /* VideoView */,
 				78F581862B52B169003E2F42 /* Student Dashboard */,
 				78F581502B4EDDF0003E2F42 /* Login Page */,
@@ -301,6 +315,7 @@
 				78F581912B52BB7D003E2F42 /* StudentDashboardPanelView.swift in Sources */,
 				78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */,
 				78F581612B4EF95E003E2F42 /* TextFieldDS.swift in Sources */,
+				78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */,
 				78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */,
 				78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */,
 				78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */,
@@ -309,6 +324,7 @@
 				78F5818A2B52B2A0003E2F42 /* VideoCellView.swift in Sources */,
 				78F5818C2B52B2CA003E2F42 /* Video.swift in Sources */,
 				D7BE897C2B4F04810078CD08 /* AppDelegate.swift in Sources */,
+				78EEE48F2B52D64400B00E9F /* Majors.swift in Sources */,
 				78F581882B52B1D4003E2F42 /* StudentDashboardView.swift in Sources */,
 				78F581632B4EFBE2003E2F42 /* LoginViewModel.swift in Sources */,
 			);

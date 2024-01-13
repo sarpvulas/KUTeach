@@ -18,7 +18,7 @@ struct StudentPanelView: View {
                 .tabItem {
                     Label("Dashboard", systemImage: "list.dash.header.rectangle")
                 }
-            StudentDashboardView()
+            StudentSubscriptionView()
                 .tabItem {
                     Label("Subscription", systemImage: "cart")
                 }
