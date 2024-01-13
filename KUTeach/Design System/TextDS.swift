@@ -21,16 +21,28 @@ struct ButtonTextDS: View {
 }
 
 // Heading 1 Text
-struct Heading1Text: View {
+struct Heading1TextWhite: View {
     let text: String
 
     var body: some View {
         Text(text)
-            .font(.custom("SFProDisplay-Bold", size: 24)) // Example size and weight
+            .font(.custom("SFProDisplay-Bold", size: 20)) // Example size and weight
             .foregroundColor(.white)
             .lineLimit(nil)
     }
 }
+
+struct Heading1TextBlack: View {
+    let text: String
+
+    var body: some View {
+        Text(text)
+            .font(.custom("SFProDisplay-Bold", size: 20)) // Example size and weight
+            .foregroundColor(.black)
+            .lineLimit(nil)
+    }
+}
+
 
 // Body Text
 struct BodyText: View {

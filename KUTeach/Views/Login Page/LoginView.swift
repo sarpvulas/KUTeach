@@ -35,15 +35,15 @@ struct LoginView: View {
                                 .font(.system(size: 100))
                                 .foregroundStyle(.purple)
 
-                            Heading1Text(text: "Login Page")
+                            Heading1TextWhite(text: "Login Page")
                                 .padding()
 
-                            TextFieldDS(text: $emailText, placeholder: "Enter email")
+                            TextFieldDSWhite(text: $emailText, placeholder: "Enter email")
                                            .padding()
                             
-                            TextFieldDS(text: $usernameText, placeholder: "Enter username").padding()
-                            
-                            TextFieldDS(text: $passwordText, placeholder: "Enter password")
+                            TextFieldDSWhite(text: $usernameText, placeholder: "Enter username").padding()
+
+                            TextFieldDSWhite(text: $passwordText, placeholder: "Enter password")
                                            .padding()
 
                             //SecureField("Enter password", text: $passwordText).padding()
