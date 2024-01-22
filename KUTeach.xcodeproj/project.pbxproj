@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78056FFB2B5CFA96008D7751 /* UploadLectureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78056FFA2B5CFA96008D7751 /* UploadLectureView.swift */; };
+		78056FFD2B5D00DD008D7751 /* UploadLectureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78056FFC2B5D00DD008D7751 /* UploadLectureViewModel.swift */; };
+		780570002B5D38A0008D7751 /* VideoUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78056FFF2B5D38A0008D7751 /* VideoUploader.swift */; };
+		780570022B5D3A7C008D7751 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 780570012B5D3A7C008D7751 /* FirebaseStorage */; };
 		78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */; };
 		78EEE48A2B52C9EC00B00E9F /* StudentProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */; };
 		78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */; };
@@ -39,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78056FFA2B5CFA96008D7751 /* UploadLectureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLectureView.swift; sourceTree = "<group>"; };
+		78056FFC2B5D00DD008D7751 /* UploadLectureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLectureViewModel.swift; sourceTree = "<group>"; };
+		78056FFF2B5D38A0008D7751 /* VideoUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUploader.swift; sourceTree = "<group>"; };
 		78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfilePageView.swift; sourceTree = "<group>"; };
 		78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewModel.swift; sourceTree = "<group>"; };
 		78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSubscriptionView.swift; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 				D7BE89712B4EFF680078CD08 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				D7BE89772B4EFF680078CD08 /* FirebaseAppCheck in Frameworks */,
 				D7BE89752B4EFF680078CD08 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				780570022B5D3A7C008D7751 /* FirebaseStorage in Frameworks */,
 				D7BE89812B4F06660078CD08 /* FirebaseAuth in Frameworks */,
 				D7BE897F2B4F063F0078CD08 /* FirebaseFirestore in Frameworks */,
 			);
@@ -83,6 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78056FF72B5CFA33008D7751 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				78056FFF2B5D38A0008D7751 /* VideoUploader.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		78056FF82B5CFA65008D7751 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		78EEE48B2B52D23800B00E9F /* Subscription Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				D7BE89822B4F0DAF0078CD08 /* Info.plist */,
-				D7BE897A2B4F046C0078CD08 /* Delegates */,
-				78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */,
 				78F581842B4FBA27003E2F42 /* GoogleService-Info.plist */,
 				78F581452B4ED7DC003E2F42 /* Assets.xcassets */,
+				78056FF82B5CFA65008D7751 /* Application */,
 				78F581552B4EE20D003E2F42 /* Views */,
+				D7BE897A2B4F046C0078CD08 /* Delegates */,
 				78F581542B4EE1F0003E2F42 /* Model */,
 				78F5814F2B4EDDC2003E2F42 /* Design System */,
 				78F581472B4ED7DC003E2F42 /* Preview Content */,
@@ -166,6 +190,8 @@
 		78F581532B4EDE71003E2F42 /* Upload Lecture Page */ = {
 			isa = PBXGroup;
 			children = (
+				78056FFA2B5CFA96008D7751 /* UploadLectureView.swift */,
+				78056FFC2B5D00DD008D7751 /* UploadLectureViewModel.swift */,
 			);
 			path = "Upload Lecture Page";
 			sourceTree = "<group>";
@@ -188,6 +214,7 @@
 				78F581502B4EDDF0003E2F42 /* Login Page */,
 				78F581512B4EDE09003E2F42 /* Profile Page */,
 				78F581532B4EDE71003E2F42 /* Upload Lecture Page */,
+				78056FF72B5CFA33008D7751 /* Service */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +276,7 @@
 				D7BE89762B4EFF680078CD08 /* FirebaseAppCheck */,
 				D7BE897E2B4F063F0078CD08 /* FirebaseFirestore */,
 				D7BE89802B4F06660078CD08 /* FirebaseAuth */,
+				780570012B5D3A7C008D7751 /* FirebaseStorage */,
 			);
 			productName = KUTeach;
 			productReference = 78F5813E2B4ED7DB003E2F42 /* KUTeach.app */;
@@ -313,12 +341,15 @@
 				78EEE48A2B52C9EC00B00E9F /* StudentProfileViewModel.swift in Sources */,
 				78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */,
 				78F581912B52BB7D003E2F42 /* StudentDashboardPanelView.swift in Sources */,
+				78056FFD2B5D00DD008D7751 /* UploadLectureViewModel.swift in Sources */,
 				78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */,
+				78056FFB2B5CFA96008D7751 /* UploadLectureView.swift in Sources */,
 				78F581612B4EF95E003E2F42 /* TextFieldDS.swift in Sources */,
 				78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */,
 				78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */,
 				78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */,
 				78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */,
+				780570002B5D38A0008D7751 /* VideoUploader.swift in Sources */,
 				78F581592B4EE665003E2F42 /* Radius.swift in Sources */,
 				78F5818F2B52B588003E2F42 /* VideoView.swift in Sources */,
 				78F5818A2B52B2A0003E2F42 /* VideoCellView.swift in Sources */,
@@ -460,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KUTeach/Preview Content\"";
-				DEVELOPMENT_TEAM = 3YL59MWSRT;
+				DEVELOPMENT_TEAM = 24S3P97D2N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KUTeach/Info.plist;
@@ -475,7 +506,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Aydin.kueducationsolutions.KUTeach;
+				PRODUCT_BUNDLE_IDENTIFIER = Sarp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -491,7 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KUTeach/Preview Content\"";
-				DEVELOPMENT_TEAM = 3YL59MWSRT;
+				DEVELOPMENT_TEAM = 24S3P97D2N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KUTeach/Info.plist;
@@ -506,7 +537,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Aydin.kueducationsolutions.KUTeach;
+				PRODUCT_BUNDLE_IDENTIFIER = Sarp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -549,6 +580,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		780570012B5D3A7C008D7751 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7BE896D2B4EFF680078CD08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		D7BE896E2B4EFF680078CD08 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7BE896D2B4EFF680078CD08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

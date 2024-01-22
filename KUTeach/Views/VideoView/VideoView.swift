@@ -44,7 +44,7 @@ struct VideoView: View {
             Spacer()
 
             Link(destination: video.url, label: {
-                ButtonView(title: "Watch Now")
+                ButtonView(title: "Watch Now", color: Color.red)
             })
 
             Spacer()
@@ -59,18 +59,3 @@ struct VideoView: View {
     VideoView(video: VideoList.topTen.first!)
 }
 
-struct ButtonView: View {
-
-var title: String
-
-var body: some View {
-Text(title)
-    .bold()
-    .font(.custom("SFProText-Regular", size: 24))
-    .frame(width:200, height: 50)
-    .background(Color.red)
-    .foregroundColor(.white)
-    .clipShape(RoundedRectangle(cornerRadius: 10))
-    .shadow(radius: 1, x:3, y:3)
-}
-}

@@ -26,7 +26,7 @@ struct Heading1TextWhite: View {
 
     var body: some View {
         Text(text)
-            .font(.custom("SFProDisplay-Bold", size: 20)) // Example size and weight
+            .font(.system(size: 24, weight: .bold, design: .default))
             .foregroundColor(.white)
             .lineLimit(nil)
     }
@@ -37,7 +37,7 @@ struct Heading1TextBlack: View {
 
     var body: some View {
         Text(text)
-            .font(.custom("SFProDisplay-Bold", size: 20)) // Example size and weight
+            .font(.system(size: 24, weight: .bold, design: .default))
             .foregroundColor(.black)
             .lineLimit(nil)
     }
@@ -50,7 +50,7 @@ struct BodyText: View {
 
     var body: some View {
         Text(text)
-            .font(.custom("SFProText-Regular", size: 16)) // Example size
+            .font(.custom("SFProText-Regular", size: 16))
             .foregroundColor(.gray)
             .lineLimit(nil)
     }
@@ -62,7 +62,7 @@ struct CaptionText: View {
 
     var body: some View {
         Text(text)
-            .font(.custom("SFProText-Regular", size: 12)) // Example size
+            .font(.custom("SFProText-Regular", size: 12))
             .foregroundColor(.secondary)
             .lineLimit(nil)
     }

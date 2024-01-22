@@ -34,3 +34,21 @@ struct ButtonDS: View {
         )
     }
 }
+
+struct ButtonView: View {
+
+    var title: String
+
+    var color: Color
+
+var body: some View {
+Text(title)
+    .bold()
+    .font(.custom("SFProText-Regular", size: 24))
+    .frame(width:200, height: 50)
+    .background(color)
+    .foregroundColor(.white)
+    .clipShape(RoundedRectangle(cornerRadius: 10))
+    .shadow(radius: 1, x:3, y:3)
+}
+}
