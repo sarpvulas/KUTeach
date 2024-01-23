@@ -9,12 +9,16 @@ import Foundation
 import SwiftUI
 
 struct LecturerProfilePageView: View {
-
     @State private var oldPassword: String = ""
     @State private var newPassword: String = ""
-    @State private var shouldNavigateToSignUp = false
-    var user: User
     @StateObject private var viewModel = LecturerProfilePageViewModel()
+    @EnvironmentObject var loginViewModel : LoginViewModel
+    @State private var shouldNavigateToSignUp = false
+    @State private var errorMessage: String = ""
+    @State private var showingError: Bool = false
+
+    var user: User
+
     var body: some View {
 
         NavigationView {
@@ -38,8 +42,6 @@ struct LecturerProfilePageView: View {
 
                     HStack {
                         BodyText(text: "Teacher username: \(user.username)")
-
-
                     }
                     .padding(.leading, -150)
                     .frame(width:350, height: 50)
@@ -51,8 +53,6 @@ struct LecturerProfilePageView: View {
 
                     HStack {
                         BodyText(text: "Email: \(user.email)")
-
-
                     }.padding(.leading, -150)
                         .frame(width:350, height: 50)
                         .background(Color.white)
@@ -61,7 +61,7 @@ struct LecturerProfilePageView: View {
                         .shadow(radius: 1, x:3, y:3)
 
                     HStack {
-                        BodyText(text: "Subscribed lectures: ")
+                        BodyText(text: "Uploaded lectures: ")
 
                     }
                     .padding(.leading, -150)
@@ -75,7 +75,7 @@ struct LecturerProfilePageView: View {
                 .padding(.top, -325)
                 .padding(.horizontal, -175)
 
-                VStack (spacing: 20){
+                VStack (spacing:20){
                     Heading1TextBlack(text: "Change Password")
                         .frame(width:300, height: 50)
                         .background(Color.white)
@@ -90,33 +90,50 @@ struct LecturerProfilePageView: View {
                         .frame(width: 300)
 
                     ButtonDS(buttonTitle: "Change now!") {
-                        viewModel.changePassword(currentEmail: user.email, oldPassword: oldPassword, newPassword: newPassword) { success in
+                        loginViewModel.changePassword(currentEmail: user.email, oldPassword: oldPassword, newPassword: newPassword) { success in
                             if success {
                                 print("Password successfully updated")
                             } else {
-                                print("Failed to update password: \(viewModel.error ?? "Unknown error")")
+                                errorMessage = "Failed to update password: \(loginViewModel.error ?? "Unknown error")"
+                                showingError = true
                             }
                         }
                     }
                     ButtonDS(buttonTitle: "Logout", action: {
-                        viewModel.logout { success in
+                        loginViewModel.logout { success in
                             if success {
                                 print("Successfully logged out")
                                 self.shouldNavigateToSignUp = true
                             } else {
-                                print("Logout failed")
+                                errorMessage = "Logout failed"
+                                showingError = true
                             }
                         }
                     })
+
                 }.padding(.top, 350)
                 NavigationLink(destination: SignUpView(), isActive: $shouldNavigateToSignUp) {
                     EmptyView()
                 }
+                if showingError {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .font(.body)
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(radius: 1, x: 3, y: 3)
+                        .onTapGesture {
+                            showingError = false
+                        }
+                }
             }.navigationBarBackButtonHidden(true)
         }
+
     }
 }
 
+
 #Preview {
-    LecturerProfilePageView(user: User(username:"test", email:"test", name: "test", isLecturer: true))
+    LecturerProfilePageView(user: User(username:"test", email:"test", name: "test", isLecturer: true)).environmentObject(LoginViewModel())
 }

@@ -11,6 +11,7 @@ import SwiftUI
 struct LecturerPanelView: View {
     var user: User
     var body: some View {
+        
         TabView{
             LecturerProfilePageView(user: user)
                 .tabItem {

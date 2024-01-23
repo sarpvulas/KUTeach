@@ -12,7 +12,7 @@ struct LoginView: View {
     @State private var passwordText: String = ""
     @State private var emailText: String = ""
 
-    @StateObject private var viewModel = LoginViewModel()
+    @EnvironmentObject var viewModel : LoginViewModel
 
     var body: some View {
         NavigationView {
@@ -59,10 +59,12 @@ struct LoginView: View {
                             .foregroundColor(.red)
                     }
                 }
+            }.onAppear {
+                viewModel.error = nil
             }
         }.navigationBarBackButtonHidden(viewModel.loginSuccessful)
     }
 }
 #Preview {
-    LoginView()
+    LoginView().environmentObject(LoginViewModel())
 }

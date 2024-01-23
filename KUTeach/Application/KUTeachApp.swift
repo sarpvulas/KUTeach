@@ -12,9 +12,20 @@ import SwiftUI
 struct KUTeachApp: App {
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var loginViewModel = LoginViewModel()
     var body: some Scene {
-        WindowGroup {
-            SignUpView()
+            WindowGroup {
+                if loginViewModel.loginSuccessful {
+                    loginViewModel.destinationView
+                        .environmentObject(loginViewModel)
+                        .transition(.slide)
+                } else {
+                    SignUpView()
+                        .environmentObject(loginViewModel)
+                        .transition(.slide)
+                }
+            }
         }
-    }
+
+    
 }

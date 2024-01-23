@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct StudentProfilePageView: View {
-
     @State private var oldPassword: String = ""
     @State private var newPassword: String = ""
     @StateObject private var viewModel = StudentProfilePageViewModel()
+    @EnvironmentObject var loginViewModel : LoginViewModel
     @State private var shouldNavigateToSignUp = false
+    @State private var errorMessage: String = ""
+    @State private var showingError: Bool = false
 
     var user: User
 
@@ -87,21 +89,23 @@ struct StudentProfilePageView: View {
                         .frame(width: 300)
 
                     ButtonDS(buttonTitle: "Change now!") {
-                        viewModel.changePassword(currentEmail: user.email, oldPassword: oldPassword, newPassword: newPassword) { success in
+                        loginViewModel.changePassword(currentEmail: user.email, oldPassword: oldPassword, newPassword: newPassword) { success in
                             if success {
                                 print("Password successfully updated")
                             } else {
-                                print("Failed to update password: \(viewModel.error ?? "Unknown error")")
+                                errorMessage = "Failed to update password: \(loginViewModel.error ?? "Unknown error")"
+                                showingError = true
                             }
                         }
                     }
                     ButtonDS(buttonTitle: "Logout", action: {
-                        viewModel.logout { success in
+                        loginViewModel.logout { success in
                             if success {
                                 print("Successfully logged out")
                                 self.shouldNavigateToSignUp = true
                             } else {
-                                print("Logout failed")
+                                errorMessage = "Logout failed"
+                                showingError = true
                             }
                         }
                     })
@@ -110,13 +114,23 @@ struct StudentProfilePageView: View {
                 NavigationLink(destination: SignUpView(), isActive: $shouldNavigateToSignUp) {
                     EmptyView()
                 }
-
+                if showingError {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .font(.body)
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(radius: 1, x: 3, y: 3)
+                        .onTapGesture {
+                            showingError = false
+                        }
+                }
             }.navigationBarBackButtonHidden(true)
         }
 
     }
 }
-
 #Preview {
-    StudentProfilePageView(user: User(username:"test", email:"test", name: "test", isLecturer: false))
+    StudentProfilePageView(user: User(username:"test", email:"test", name: "test", isLecturer: false)).environmentObject(LoginViewModel())
 }
