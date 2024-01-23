@@ -42,5 +42,5 @@ struct StudentDashboardView: View {
 
 
 #Preview {
-    StudentDashboardView()
+    StudentDashboardView().environmentObject(LoginViewModel())
 }

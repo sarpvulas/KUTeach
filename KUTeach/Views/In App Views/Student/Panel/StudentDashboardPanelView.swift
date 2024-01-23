@@ -28,5 +28,5 @@ struct StudentPanelView: View {
 }
 
 #Preview {
-    StudentPanelView(user: User(username:"test", email:"test", name: "test", isLecturer: false))
+    StudentPanelView(user: User(username:"test", email:"test", name: "test", isLecturer: false)).environmentObject(LoginViewModel())
 }

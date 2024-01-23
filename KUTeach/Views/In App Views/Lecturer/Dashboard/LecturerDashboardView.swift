@@ -23,8 +23,6 @@ struct LecturerDashboardView: View {
 
         VStack {
 
-            //panel()
-
             NavigationView {
                 List(filteredSearchTerms, id: \.id) { video in
                     NavigationLink(destination: VideoView(video: video), label: {
@@ -36,7 +34,10 @@ struct LecturerDashboardView: View {
                     .searchable(text: $searchTerm)
             }
         }
-
-
     }
 }
+
+#Preview {
+    LecturerDashboardView().environmentObject(LoginViewModel())
+}
+
