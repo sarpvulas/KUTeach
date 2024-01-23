@@ -12,7 +12,7 @@ struct SignUpView: View {
     @State private var usernameText: String = ""
     @State private var passwordText: String = ""
     @State private var emailText: String = ""
-    @State private var isStudent: Bool = false
+    @State private var isLecturer: Bool = false
 
     @StateObject private var viewModel = SignUpViewModel()
 
@@ -41,8 +41,8 @@ struct SignUpView: View {
                     Heading1TextWhite(text: "Sign Up to KUTeach")
 
                     VStack(spacing: -8) {
-                        Toggle(isOn: $isStudent) {
-                            Text("I am a student.")
+                        Toggle(isOn: $isLecturer) {
+                            Text("I am a lecturer.")
                                 .foregroundColor(.white)
                         }
                         .padding()
@@ -64,7 +64,7 @@ struct SignUpView: View {
                     NavigationLink(destination: LoginView(), isActive: $viewModel.signupSuccessful) {
                                             EmptyView()}
                     ButtonDS(buttonTitle: "Sign Up", action: {
-                        viewModel.signUp(email: emailText, password: passwordText, username: usernameText, isStudent: isStudent)
+                        viewModel.signUp(email: emailText, password: passwordText, username: usernameText, isLecturer: isLecturer)
                     }).padding()
 
                     NavigationLink(destination: LoginView()) {

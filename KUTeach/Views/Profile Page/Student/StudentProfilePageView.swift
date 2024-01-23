@@ -33,7 +33,7 @@ struct StudentProfilePageView: View {
                 }
 
                 HStack {
-                    BodyText(text: "username: ")
+                    BodyText(text: "Student username: ")
 
 
                 }
