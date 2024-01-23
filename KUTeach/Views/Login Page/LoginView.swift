@@ -17,50 +17,50 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
 
-                    ZStack(alignment: .center) {
-                        BackgroundDS(color1: .cyan, color2: .white)
-                                    Circle()
-                                        .scale(1.5)
-                                        .foregroundColor(.blue)
+            ZStack(alignment: .center) {
+                BackgroundDS(color1: .cyan, color2: .white)
+                Circle()
+                    .scale(1.5)
+                    .foregroundColor(.blue)
 
-                                    Circle()
-                                        .scale(2)
-                                        .foregroundColor(.blue.opacity(0.15))
-
-
-                        VStack {
-                            Spacer()
-                            Image(systemName: "person.crop.square")
-                                .font(.system(size: 100))
-                                .foregroundStyle(.purple)
-
-                            Heading1TextWhite(text: "Welcome!")
-                                .padding()
-                            Heading1TextWhite(text: "Login to KUTeach")
+                Circle()
+                    .scale(2)
+                    .foregroundColor(.blue.opacity(0.15))
 
 
-                            TextFieldDSWhite(text: $emailText, placeholder: "Enter email")
-                                           .padding()
+                VStack {
+                    Spacer()
+                    Image(systemName: "person.crop.square")
+                        .font(.system(size: 100))
+                        .foregroundStyle(.purple)
 
-                            SecureFieldDSWhite(text: $passwordText, placeholder: "Enter password")
-                                .padding()
+                    Heading1TextWhite(text: "Welcome!")
+                        .padding()
+                    Heading1TextWhite(text: "Login to KUTeach")
 
-                            NavigationLink(destination: viewModel.destinationView, isActive: $viewModel.loginSuccessful) {EmptyView()}
-                            ButtonDS(buttonTitle: "Login", action: {
-                                viewModel.login(withEmail: emailText, password: passwordText)
-                            })
 
-                            Spacer()
-                            Spacer()
-                            Spacer()
+                    TextFieldDSWhite(text: $emailText, placeholder: "Enter email")
+                        .padding()
 
-                            if let error = viewModel.error {
-                                            Text(error)
-                                                .foregroundColor(.red)
-                                        }
-                        }
+                    SecureFieldDSWhite(text: $passwordText, placeholder: "Enter password")
+                        .padding()
+
+                    NavigationLink(destination: viewModel.destinationView, isActive: $viewModel.loginSuccessful) {EmptyView()}
+                    ButtonDS(buttonTitle: "Login", action: {
+                        viewModel.login(withEmail: emailText, password: passwordText)
+                    })
+
+                    Spacer()
+                    Spacer()
+                    Spacer()
+
+                    if let error = viewModel.error {
+                        Text(error)
+                            .foregroundColor(.red)
+                    }
+                }
             }
-        }
+        }.navigationBarBackButtonHidden(viewModel.loginSuccessful)
     }
 }
 #Preview {

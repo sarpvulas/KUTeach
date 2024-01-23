@@ -24,8 +24,7 @@ struct LecturerPanelView: View {
                 .tabItem {
                     Label("Upload", systemImage: "cart")
                 }
-
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

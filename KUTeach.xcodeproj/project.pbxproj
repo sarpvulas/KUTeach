@@ -36,6 +36,7 @@
 		D77146E12B60381D00601452 /* LecturerPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146E02B60381D00601452 /* LecturerPanelView.swift */; };
 		D77146E32B60386900601452 /* LecturerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146E22B60386900601452 /* LecturerDashboardView.swift */; };
 		D77146EA2B603CFD00601452 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146E92B603CFD00601452 /* User.swift */; };
+		D77146F02B60514C00601452 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146EF2B60514C00601452 /* AppState.swift */; };
 		D7983ED72B6011AC0089B20C /* SecureFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */; };
 		D7983EDC2B6013DE0089B20C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */; };
 		D7983EDE2B6013E90089B20C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EDD2B6013E90089B20C /* LoginView.swift */; };
@@ -81,6 +82,7 @@
 		D77146E02B60381D00601452 /* LecturerPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturerPanelView.swift; sourceTree = "<group>"; };
 		D77146E22B60386900601452 /* LecturerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturerDashboardView.swift; sourceTree = "<group>"; };
 		D77146E92B603CFD00601452 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D77146EF2B60514C00601452 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldDS.swift; sourceTree = "<group>"; };
 		D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D7983EDD2B6013E90089B20C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				78056FFF2B5D38A0008D7751 /* VideoUploader.swift */,
+				D77146EF2B60514C00601452 /* AppState.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */,
 				D7983ED72B6011AC0089B20C /* SecureFieldDS.swift in Sources */,
 				78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */,
+				D77146F02B60514C00601452 /* AppState.swift in Sources */,
 				D77146DA2B60336500601452 /* LecturerProfilePageViewModel.swift in Sources */,
 				78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */,
 				D7983EDE2B6013E90089B20C /* LoginView.swift in Sources */,

@@ -23,8 +23,7 @@ struct StudentPanelView: View {
                 .tabItem {
                     Label("Subscription", systemImage: "cart")
                 }
-
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

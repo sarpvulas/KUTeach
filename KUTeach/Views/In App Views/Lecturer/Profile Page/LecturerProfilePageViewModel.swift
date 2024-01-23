@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+
 class LecturerProfilePageViewModel: ObservableObject {
     @Published var error: String?
 
@@ -37,6 +38,16 @@ class LecturerProfilePageViewModel: ObservableObject {
             }
         } else {
             self.error = "User not found"
+            completion(false)
+        }
+    }
+
+    func logout(completion: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
             completion(false)
         }
     }
