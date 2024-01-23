@@ -60,7 +60,7 @@ struct SignUpView: View {
                         TextFieldDSWhite(text: $emailText, placeholder: "Enter email")
                             .padding()
                         TextFieldDSWhite(text: $usernameText, placeholder: "Enter username").padding()
-                        TextFieldDSWhite(text: $usernameText, placeholder: "Enter name and surname").padding()
+                        TextFieldDSWhite(text: $name, placeholder: "Enter name and surname").padding()
                         SecureFieldDSWhite(text: $passwordText, placeholder: "Enter password")
                             .padding()
 
