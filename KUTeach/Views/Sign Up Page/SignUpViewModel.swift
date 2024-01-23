@@ -1,0 +1,43 @@
+import Foundation
+import FirebaseAuth
+import FirebaseFirestore
+
+class SignUpViewModel: ObservableObject {
+
+    @Published var error: String?
+    @Published var signupSuccessful = false
+
+    let auth = Auth.auth()
+    let db = Firestore.firestore()
+
+    func signUp(email: String, password: String, username: String, isStudent: Bool) {
+        auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self?.error = error.localizedDescription
+                    self?.signupSuccessful = false
+                }
+                return
+            }
+            if let userId = authResult?.user.uid {
+                self?.saveUserToDatabase(userId: userId, email: email, username: username, isStudent: isStudent)
+            }
+            DispatchQueue.main.async {
+                self?.signupSuccessful = true
+            }
+        }
+    }
+    
+    private func saveUserToDatabase(userId: String, email: String, username: String, isStudent: Bool) {
+        let ref = db.collection("users")
+        ref.document(userId).setData([
+            "username": username,
+            "email": email,
+            "isStudent": isStudent
+        ]) { [weak self] error in
+            if let error = error {
+                self?.error = "Failed to save user: \(error.localizedDescription)"
+            }
+        }
+    }
+}

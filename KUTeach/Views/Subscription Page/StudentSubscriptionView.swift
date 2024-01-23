@@ -16,7 +16,6 @@ struct StudentSubscriptionView: View {
 
             Heading1TextBlack(text: "Subscriptions")
 
-
         }
     }
 }

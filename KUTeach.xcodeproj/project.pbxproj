@@ -16,7 +16,7 @@
 		78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */; };
 		78EEE48F2B52D64400B00E9F /* Majors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48E2B52D64400B00E9F /* Majors.swift */; };
 		78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */; };
-		78F581442B4ED7DB003E2F42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581432B4ED7DB003E2F42 /* LoginView.swift */; };
+		78F581442B4ED7DB003E2F42 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581432B4ED7DB003E2F42 /* SignUpView.swift */; };
 		78F581462B4ED7DC003E2F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F581452B4ED7DC003E2F42 /* Assets.xcassets */; };
 		78F581492B4ED7DC003E2F42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F581482B4ED7DC003E2F42 /* Preview Assets.xcassets */; };
 		78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581562B4EE52A003E2F42 /* Spacing.swift */; };
@@ -25,13 +25,17 @@
 		78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815C2B4EEC3A003E2F42 /* TextDS.swift */; };
 		78F5815F2B4EF129003E2F42 /* BackgroundDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5815E2B4EF129003E2F42 /* BackgroundDS.swift */; };
 		78F581612B4EF95E003E2F42 /* TextFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581602B4EF95E003E2F42 /* TextFieldDS.swift */; };
-		78F581632B4EFBE2003E2F42 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581622B4EFBE2003E2F42 /* LoginViewModel.swift */; };
-		78F581852B4FBA27003E2F42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78F581842B4FBA27003E2F42 /* GoogleService-Info.plist */; };
+		78F581632B4EFBE2003E2F42 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581622B4EFBE2003E2F42 /* SignUpViewModel.swift */; };
 		78F581882B52B1D4003E2F42 /* StudentDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581872B52B1D4003E2F42 /* StudentDashboardView.swift */; };
 		78F5818A2B52B2A0003E2F42 /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581892B52B2A0003E2F42 /* VideoCellView.swift */; };
 		78F5818C2B52B2CA003E2F42 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5818B2B52B2CA003E2F42 /* Video.swift */; };
 		78F5818F2B52B588003E2F42 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5818E2B52B588003E2F42 /* VideoView.swift */; };
 		78F581912B52BB7D003E2F42 /* StudentDashboardPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */; };
+		D7983ED72B6011AC0089B20C /* SecureFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */; };
+		D7983EDC2B6013DE0089B20C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */; };
+		D7983EDE2B6013E90089B20C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EDD2B6013E90089B20C /* LoginView.swift */; };
+		D7983EE02B60157F0089B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7983EDF2B60157F0089B20C /* GoogleService-Info.plist */; };
+		D7983EE22B601DD10089B20C /* LinkText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EE12B601DD10089B20C /* LinkText.swift */; };
 		D7BE896F2B4EFF680078CD08 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE896E2B4EFF680078CD08 /* FirebaseAnalytics */; };
 		D7BE89712B4EFF680078CD08 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE89702B4EFF680078CD08 /* FirebaseAnalyticsOnDeviceConversion */; };
 		D7BE89732B4EFF680078CD08 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE89722B4EFF680078CD08 /* FirebaseAnalyticsSwift */; };
@@ -52,7 +56,7 @@
 		78EEE48E2B52D64400B00E9F /* Majors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Majors.swift; sourceTree = "<group>"; };
 		78F5813E2B4ED7DB003E2F42 /* KUTeach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KUTeach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUTeachApp.swift; sourceTree = "<group>"; };
-		78F581432B4ED7DB003E2F42 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		78F581432B4ED7DB003E2F42 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		78F581452B4ED7DC003E2F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78F581482B4ED7DC003E2F42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		78F581562B4EE52A003E2F42 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
@@ -61,13 +65,17 @@
 		78F5815C2B4EEC3A003E2F42 /* TextDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDS.swift; sourceTree = "<group>"; };
 		78F5815E2B4EF129003E2F42 /* BackgroundDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundDS.swift; sourceTree = "<group>"; };
 		78F581602B4EF95E003E2F42 /* TextFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDS.swift; sourceTree = "<group>"; };
-		78F581622B4EFBE2003E2F42 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		78F581842B4FBA27003E2F42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78F581622B4EFBE2003E2F42 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		78F581872B52B1D4003E2F42 /* StudentDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDashboardView.swift; sourceTree = "<group>"; };
 		78F581892B52B2A0003E2F42 /* VideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellView.swift; sourceTree = "<group>"; };
 		78F5818B2B52B2CA003E2F42 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		78F5818E2B52B588003E2F42 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDashboardPanelView.swift; sourceTree = "<group>"; };
+		D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldDS.swift; sourceTree = "<group>"; };
+		D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D7983EDD2B6013E90089B20C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D7983EDF2B60157F0089B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7983EE12B601DD10089B20C /* LinkText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkText.swift; sourceTree = "<group>"; };
 		D7BE897B2B4F04810078CD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BE89822B4F0DAF0078CD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,8 +143,8 @@
 		78F581402B4ED7DB003E2F42 /* KUTeach */ = {
 			isa = PBXGroup;
 			children = (
+				D7983EDF2B60157F0089B20C /* GoogleService-Info.plist */,
 				D7BE89822B4F0DAF0078CD08 /* Info.plist */,
-				78F581842B4FBA27003E2F42 /* GoogleService-Info.plist */,
 				78F581452B4ED7DC003E2F42 /* Assets.xcassets */,
 				78056FF82B5CFA65008D7751 /* Application */,
 				78F581552B4EE20D003E2F42 /* Views */,
@@ -165,17 +173,19 @@
 				78F5815C2B4EEC3A003E2F42 /* TextDS.swift */,
 				78F5815E2B4EF129003E2F42 /* BackgroundDS.swift */,
 				78F581602B4EF95E003E2F42 /* TextFieldDS.swift */,
+				D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */,
+				D7983EE12B601DD10089B20C /* LinkText.swift */,
 			);
 			path = "Design System";
 			sourceTree = "<group>";
 		};
-		78F581502B4EDDF0003E2F42 /* Login Page */ = {
+		78F581502B4EDDF0003E2F42 /* Sign Up Page */ = {
 			isa = PBXGroup;
 			children = (
-				78F581432B4ED7DB003E2F42 /* LoginView.swift */,
-				78F581622B4EFBE2003E2F42 /* LoginViewModel.swift */,
+				78F581432B4ED7DB003E2F42 /* SignUpView.swift */,
+				78F581622B4EFBE2003E2F42 /* SignUpViewModel.swift */,
 			);
-			path = "Login Page";
+			path = "Sign Up Page";
 			sourceTree = "<group>";
 		};
 		78F581512B4EDE09003E2F42 /* Profile Page */ = {
@@ -211,7 +221,8 @@
 				78EEE48B2B52D23800B00E9F /* Subscription Page */,
 				78F5818D2B52B560003E2F42 /* VideoView */,
 				78F581862B52B169003E2F42 /* Student Dashboard */,
-				78F581502B4EDDF0003E2F42 /* Login Page */,
+				78F581502B4EDDF0003E2F42 /* Sign Up Page */,
+				D7983EDA2B6013C60089B20C /* Login Page */,
 				78F581512B4EDE09003E2F42 /* Profile Page */,
 				78F581532B4EDE71003E2F42 /* Upload Lecture Page */,
 				78056FF72B5CFA33008D7751 /* Service */,
@@ -235,6 +246,15 @@
 				78F5818E2B52B588003E2F42 /* VideoView.swift */,
 			);
 			path = VideoView;
+			sourceTree = "<group>";
+		};
+		D7983EDA2B6013C60089B20C /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */,
+				D7983EDD2B6013E90089B20C /* LoginView.swift */,
+			);
+			path = "Login Page";
 			sourceTree = "<group>";
 		};
 		D7BE897A2B4F046C0078CD08 /* Delegates */ = {
@@ -325,7 +345,7 @@
 			files = (
 				78F581492B4ED7DC003E2F42 /* Preview Assets.xcassets in Resources */,
 				78F581462B4ED7DC003E2F42 /* Assets.xcassets in Resources */,
-				78F581852B4FBA27003E2F42 /* GoogleService-Info.plist in Resources */,
+				D7983EE02B60157F0089B20C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F5815F2B4EF129003E2F42 /* BackgroundDS.swift in Sources */,
-				78F581442B4ED7DB003E2F42 /* LoginView.swift in Sources */,
+				78F581442B4ED7DB003E2F42 /* SignUpView.swift in Sources */,
 				78EEE48A2B52C9EC00B00E9F /* StudentProfileViewModel.swift in Sources */,
 				78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */,
 				78F581912B52BB7D003E2F42 /* StudentDashboardPanelView.swift in Sources */,
@@ -346,8 +366,11 @@
 				78056FFB2B5CFA96008D7751 /* UploadLectureView.swift in Sources */,
 				78F581612B4EF95E003E2F42 /* TextFieldDS.swift in Sources */,
 				78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */,
+				D7983ED72B6011AC0089B20C /* SecureFieldDS.swift in Sources */,
 				78F5815B2B4EE6F2003E2F42 /* ButtonDS.swift in Sources */,
 				78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */,
+				D7983EDE2B6013E90089B20C /* LoginView.swift in Sources */,
+				D7983EE22B601DD10089B20C /* LinkText.swift in Sources */,
 				78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */,
 				780570002B5D38A0008D7751 /* VideoUploader.swift in Sources */,
 				78F581592B4EE665003E2F42 /* Radius.swift in Sources */,
@@ -355,9 +378,10 @@
 				78F5818A2B52B2A0003E2F42 /* VideoCellView.swift in Sources */,
 				78F5818C2B52B2CA003E2F42 /* Video.swift in Sources */,
 				D7BE897C2B4F04810078CD08 /* AppDelegate.swift in Sources */,
+				D7983EDC2B6013DE0089B20C /* LoginViewModel.swift in Sources */,
 				78EEE48F2B52D64400B00E9F /* Majors.swift in Sources */,
 				78F581882B52B1D4003E2F42 /* StudentDashboardView.swift in Sources */,
-				78F581632B4EFBE2003E2F42 /* LoginViewModel.swift in Sources */,
+				78F581632B4EFBE2003E2F42 /* SignUpViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KUTeach/Preview Content\"";
-				DEVELOPMENT_TEAM = 24S3P97D2N;
+				DEVELOPMENT_TEAM = 3YL59MWSRT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KUTeach/Info.plist;
@@ -506,7 +530,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Sarp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kueducationsolutions.KUTeach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -522,7 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KUTeach/Preview Content\"";
-				DEVELOPMENT_TEAM = 24S3P97D2N;
+				DEVELOPMENT_TEAM = 3YL59MWSRT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KUTeach/Info.plist;
@@ -537,7 +561,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Sarp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kueducationsolutions.KUTeach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
