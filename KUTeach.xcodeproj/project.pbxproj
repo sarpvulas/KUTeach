@@ -198,15 +198,6 @@
 			path = "Sign Up Page";
 			sourceTree = "<group>";
 		};
-		78F581512B4EDE09003E2F42 /* Profile Page */ = {
-			isa = PBXGroup;
-			children = (
-				D77146D82B60319600601452 /* Lecturer */,
-				D77146D72B60318A00601452 /* Student */,
-			);
-			path = "Profile Page";
-			sourceTree = "<group>";
-		};
 		78F581532B4EDE71003E2F42 /* Upload Lecture Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,13 +220,10 @@
 		78F581552B4EE20D003E2F42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				78EEE48B2B52D23800B00E9F /* Subscription Page */,
 				78F5818D2B52B560003E2F42 /* VideoView */,
-				78F581862B52B169003E2F42 /* In App Views */,
 				78F581502B4EDDF0003E2F42 /* Sign Up Page */,
 				D7983EDA2B6013C60089B20C /* Login Page */,
-				78F581512B4EDE09003E2F42 /* Profile Page */,
-				78F581532B4EDE71003E2F42 /* Upload Lecture Page */,
+				78F581862B52B169003E2F42 /* In App Views */,
 				78056FF72B5CFA33008D7751 /* Service */,
 			);
 			path = Views;
@@ -259,29 +247,13 @@
 			path = VideoView;
 			sourceTree = "<group>";
 		};
-		D77146D72B60318A00601452 /* Student */ = {
-			isa = PBXGroup;
-			children = (
-				78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */,
-				78EEE4892B52C9EC00B00E9F /* StudentProfilePageViewModel.swift */,
-			);
-			path = Student;
-			sourceTree = "<group>";
-		};
-		D77146D82B60319600601452 /* Lecturer */ = {
-			isa = PBXGroup;
-			children = (
-				D77146D92B60336500601452 /* LecturerProfilePageViewModel.swift */,
-				D77146DB2B60336F00601452 /* LecturerProfilePageView.swift */,
-			);
-			path = Lecturer;
-			sourceTree = "<group>";
-		};
 		D77146DE2B6037EB00601452 /* Student */ = {
 			isa = PBXGroup;
 			children = (
-				D77146E72B6038F500601452 /* Panel */,
+				78EEE48B2B52D23800B00E9F /* Subscription Page */,
+				D77146EC2B6045D300601452 /* Profile Page */,
 				D77146E62B6038ED00601452 /* Dashboard */,
+				D77146E72B6038F500601452 /* Panel */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -289,6 +261,8 @@
 		D77146DF2B6037FB00601452 /* Lecturer */ = {
 			isa = PBXGroup;
 			children = (
+				78F581532B4EDE71003E2F42 /* Upload Lecture Page */,
+				D77146EB2B6045C200601452 /* Profile Page */,
 				D77146E52B6038E100601452 /* Dashboard */,
 				D77146E42B6038D400601452 /* Panel */,
 			);
@@ -325,6 +299,24 @@
 				78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */,
 			);
 			path = Panel;
+			sourceTree = "<group>";
+		};
+		D77146EB2B6045C200601452 /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				D77146D92B60336500601452 /* LecturerProfilePageViewModel.swift */,
+				D77146DB2B60336F00601452 /* LecturerProfilePageView.swift */,
+			);
+			path = "Profile Page";
+			sourceTree = "<group>";
+		};
+		D77146EC2B6045D300601452 /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				78EEE4892B52C9EC00B00E9F /* StudentProfilePageViewModel.swift */,
+				78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */,
+			);
+			path = "Profile Page";
 			sourceTree = "<group>";
 		};
 		D7983EDA2B6013C60089B20C /* Login Page */ = {

@@ -13,6 +13,7 @@ struct LecturerProfilePageView: View {
     @State private var oldPassword: String = ""
     @State private var newPassword: String = ""
     var user: User
+    @StateObject private var viewModel = LecturerProfilePageViewModel()
     var body: some View {
 
         ZStack {
@@ -24,8 +25,8 @@ struct LecturerProfilePageView: View {
                     Image(systemName: "person.crop.square")
                         .resizable()
                         .frame(width: 75, height: 75)
-                    
-                    Heading1TextBlack(text: "Name Surname")
+
+                    Heading1TextBlack(text: user.name)
                         .frame(width:200, height: 50)
                         .background(Color.white)
                         .foregroundColor(.white)
@@ -34,20 +35,20 @@ struct LecturerProfilePageView: View {
                 }
 
                 HStack {
-                    BodyText(text: "Teacher username: ")
+                    BodyText(text: "Teacher username: \(user.username)")
 
 
                 }
                 .padding(.leading, -150)
                 .frame(width:350, height: 50)
-                    .background(Color.white)
-                    .foregroundColor(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(radius: 1, x:3, y:3)
+                .background(Color.white)
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 1, x:3, y:3)
 
 
                 HStack {
-                    BodyText(text: "email: ")
+                    BodyText(text: "Email: \(user.email)")
 
 
                 }.padding(.leading, -150)
@@ -62,11 +63,11 @@ struct LecturerProfilePageView: View {
 
                 }
                 .padding(.leading, -150)
-                    .frame(width:350, height: 50)
-                    .background(Color.white)
-                    .foregroundColor(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(radius: 1, x:3, y:3)
+                .frame(width:350, height: 50)
+                .background(Color.white)
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 1, x:3, y:3)
 
             }
             .padding(.top, -325)
@@ -74,19 +75,29 @@ struct LecturerProfilePageView: View {
 
             VStack (spacing: 30){
                 Heading1TextBlack(text: "Change Password")
-                    .frame(width:200, height: 50)
+                    .frame(width:300, height: 50)
                     .background(Color.white)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(radius: 1, x:3, y:3)
 
-                    TextFieldDSBlack(text: $oldPassword, placeholder: "Enter old password")
+                SecureFieldDSBlack(text: $oldPassword, placeholder: "Enter old password")
                     .frame(width: 300)
 
-                    TextFieldDSBlack(text: $oldPassword, placeholder: "Enter new password")
+                SecureFieldDSBlack(text: $newPassword, placeholder: "Enter new password")
                     .frame(width: 300)
+
+                ButtonDS(buttonTitle: "Change now!") {
+                    viewModel.changePassword(currentEmail: user.email, oldPassword: oldPassword, newPassword: newPassword) { success in
+                        if success {
+                            print("Password successfully updated")
+                        } else {
+                            print("Failed to update password: \(viewModel.error ?? "Unknown error")")
+                        }
+                    }
+                }
             }
-            .padding(.top, 300)
+            .padding(.top, 400)
 
         }
 

@@ -71,16 +71,16 @@ struct StudentProfilePageView: View {
 
             VStack (spacing: 30){
                 Heading1TextBlack(text: "Change Password")
-                    .frame(width:250, height: 50)
+                    .frame(width:300, height: 50)
                     .background(Color.white)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(radius: 1, x:3, y:3)
 
-                TextFieldDSBlack(text: $oldPassword, placeholder: "Enter old password")
+                SecureFieldDSBlack(text: $oldPassword, placeholder: "Enter old password")
                     .frame(width: 300)
 
-                TextFieldDSBlack(text: $oldPassword, placeholder: "Enter new password")
+                SecureFieldDSBlack(text: $newPassword, placeholder: "Enter new password")
                     .frame(width: 300)
 
                 ButtonDS(buttonTitle: "Change now!") {
