@@ -12,7 +12,7 @@
 		780570002B5D38A0008D7751 /* VideoUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78056FFF2B5D38A0008D7751 /* VideoUploader.swift */; };
 		780570022B5D3A7C008D7751 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 780570012B5D3A7C008D7751 /* FirebaseStorage */; };
 		78EEE4882B52C44E00B00E9F /* StudentProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */; };
-		78EEE48A2B52C9EC00B00E9F /* StudentProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */; };
+		78EEE48A2B52C9EC00B00E9F /* StudentProfilePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE4892B52C9EC00B00E9F /* StudentProfilePageViewModel.swift */; };
 		78EEE48D2B52D25A00B00E9F /* StudentSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */; };
 		78EEE48F2B52D64400B00E9F /* Majors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEE48E2B52D64400B00E9F /* Majors.swift */; };
 		78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581412B4ED7DB003E2F42 /* KUTeachApp.swift */; };
@@ -33,6 +33,9 @@
 		78F581912B52BB7D003E2F42 /* StudentDashboardPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */; };
 		D77146DA2B60336500601452 /* LecturerProfilePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146D92B60336500601452 /* LecturerProfilePageViewModel.swift */; };
 		D77146DC2B60336F00601452 /* LecturerProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146DB2B60336F00601452 /* LecturerProfilePageView.swift */; };
+		D77146E12B60381D00601452 /* LecturerPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146E02B60381D00601452 /* LecturerPanelView.swift */; };
+		D77146E32B60386900601452 /* LecturerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146E22B60386900601452 /* LecturerDashboardView.swift */; };
+		D77146EA2B603CFD00601452 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77146E92B603CFD00601452 /* User.swift */; };
 		D7983ED72B6011AC0089B20C /* SecureFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */; };
 		D7983EDC2B6013DE0089B20C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */; };
 		D7983EDE2B6013E90089B20C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7983EDD2B6013E90089B20C /* LoginView.swift */; };
@@ -53,7 +56,7 @@
 		78056FFC2B5D00DD008D7751 /* UploadLectureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLectureViewModel.swift; sourceTree = "<group>"; };
 		78056FFF2B5D38A0008D7751 /* VideoUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUploader.swift; sourceTree = "<group>"; };
 		78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfilePageView.swift; sourceTree = "<group>"; };
-		78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewModel.swift; sourceTree = "<group>"; };
+		78EEE4892B52C9EC00B00E9F /* StudentProfilePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfilePageViewModel.swift; sourceTree = "<group>"; };
 		78EEE48C2B52D25A00B00E9F /* StudentSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSubscriptionView.swift; sourceTree = "<group>"; };
 		78EEE48E2B52D64400B00E9F /* Majors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Majors.swift; sourceTree = "<group>"; };
 		78F5813E2B4ED7DB003E2F42 /* KUTeach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KUTeach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +78,9 @@
 		78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDashboardPanelView.swift; sourceTree = "<group>"; };
 		D77146D92B60336500601452 /* LecturerProfilePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturerProfilePageViewModel.swift; sourceTree = "<group>"; };
 		D77146DB2B60336F00601452 /* LecturerProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturerProfilePageView.swift; sourceTree = "<group>"; };
+		D77146E02B60381D00601452 /* LecturerPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturerPanelView.swift; sourceTree = "<group>"; };
+		D77146E22B60386900601452 /* LecturerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturerDashboardView.swift; sourceTree = "<group>"; };
+		D77146E92B603CFD00601452 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D7983ED62B6011AC0089B20C /* SecureFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldDS.swift; sourceTree = "<group>"; };
 		D7983EDB2B6013DE0089B20C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D7983EDD2B6013E90089B20C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 			children = (
 				78F5818B2B52B2CA003E2F42 /* Video.swift */,
 				78EEE48E2B52D64400B00E9F /* Majors.swift */,
+				D77146E92B603CFD00601452 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,7 +231,7 @@
 			children = (
 				78EEE48B2B52D23800B00E9F /* Subscription Page */,
 				78F5818D2B52B560003E2F42 /* VideoView */,
-				78F581862B52B169003E2F42 /* Student Dashboard */,
+				78F581862B52B169003E2F42 /* In App Views */,
 				78F581502B4EDDF0003E2F42 /* Sign Up Page */,
 				D7983EDA2B6013C60089B20C /* Login Page */,
 				78F581512B4EDE09003E2F42 /* Profile Page */,
@@ -234,14 +241,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		78F581862B52B169003E2F42 /* Student Dashboard */ = {
+		78F581862B52B169003E2F42 /* In App Views */ = {
 			isa = PBXGroup;
 			children = (
+				D77146DF2B6037FB00601452 /* Lecturer */,
+				D77146DE2B6037EB00601452 /* Student */,
 				78F581892B52B2A0003E2F42 /* VideoCellView.swift */,
-				78F581872B52B1D4003E2F42 /* StudentDashboardView.swift */,
-				78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */,
 			);
-			path = "Student Dashboard";
+			path = "In App Views";
 			sourceTree = "<group>";
 		};
 		78F5818D2B52B560003E2F42 /* VideoView */ = {
@@ -256,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				78EEE4872B52C44E00B00E9F /* StudentProfilePageView.swift */,
-				78EEE4892B52C9EC00B00E9F /* StudentProfileViewModel.swift */,
+				78EEE4892B52C9EC00B00E9F /* StudentProfilePageViewModel.swift */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -268,6 +275,56 @@
 				D77146DB2B60336F00601452 /* LecturerProfilePageView.swift */,
 			);
 			path = Lecturer;
+			sourceTree = "<group>";
+		};
+		D77146DE2B6037EB00601452 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				D77146E72B6038F500601452 /* Panel */,
+				D77146E62B6038ED00601452 /* Dashboard */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		D77146DF2B6037FB00601452 /* Lecturer */ = {
+			isa = PBXGroup;
+			children = (
+				D77146E52B6038E100601452 /* Dashboard */,
+				D77146E42B6038D400601452 /* Panel */,
+			);
+			path = Lecturer;
+			sourceTree = "<group>";
+		};
+		D77146E42B6038D400601452 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				D77146E02B60381D00601452 /* LecturerPanelView.swift */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
+		D77146E52B6038E100601452 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D77146E22B60386900601452 /* LecturerDashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		D77146E62B6038ED00601452 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				78F581872B52B1D4003E2F42 /* StudentDashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		D77146E72B6038F500601452 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				78F581902B52BB7D003E2F42 /* StudentDashboardPanelView.swift */,
+			);
+			path = Panel;
 			sourceTree = "<group>";
 		};
 		D7983EDA2B6013C60089B20C /* Login Page */ = {
@@ -380,8 +437,9 @@
 			files = (
 				78F5815F2B4EF129003E2F42 /* BackgroundDS.swift in Sources */,
 				78F581442B4ED7DB003E2F42 /* SignUpView.swift in Sources */,
-				78EEE48A2B52C9EC00B00E9F /* StudentProfileViewModel.swift in Sources */,
+				78EEE48A2B52C9EC00B00E9F /* StudentProfilePageViewModel.swift in Sources */,
 				78F5815D2B4EEC3A003E2F42 /* TextDS.swift in Sources */,
+				D77146EA2B603CFD00601452 /* User.swift in Sources */,
 				78F581912B52BB7D003E2F42 /* StudentDashboardPanelView.swift in Sources */,
 				78056FFD2B5D00DD008D7751 /* UploadLectureViewModel.swift in Sources */,
 				78F581422B4ED7DB003E2F42 /* KUTeachApp.swift in Sources */,
@@ -396,8 +454,10 @@
 				D7983EDE2B6013E90089B20C /* LoginView.swift in Sources */,
 				D7983EE22B601DD10089B20C /* LinkText.swift in Sources */,
 				78F581572B4EE52A003E2F42 /* Spacing.swift in Sources */,
+				D77146E12B60381D00601452 /* LecturerPanelView.swift in Sources */,
 				780570002B5D38A0008D7751 /* VideoUploader.swift in Sources */,
 				78F581592B4EE665003E2F42 /* Radius.swift in Sources */,
+				D77146E32B60386900601452 /* LecturerDashboardView.swift in Sources */,
 				78F5818F2B52B588003E2F42 /* VideoView.swift in Sources */,
 				78F5818A2B52B2A0003E2F42 /* VideoCellView.swift in Sources */,
 				78F5818C2B52B2CA003E2F42 /* Video.swift in Sources */,

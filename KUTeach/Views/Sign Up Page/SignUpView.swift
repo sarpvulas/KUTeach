@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var usernameText: String = ""
     @State private var passwordText: String = ""
     @State private var emailText: String = ""
+    @State private var name: String = ""
     @State private var isLecturer: Bool = false
 
     @StateObject private var viewModel = SignUpViewModel()
@@ -36,9 +37,11 @@ struct SignUpView: View {
                         .font(.system(size: 100))
                         .foregroundStyle(.purple)
 
-                    Heading1TextWhite(text: "Welcome!")
-                        .padding()
-                    Heading1TextWhite(text: "Sign Up to KUTeach")
+                    VStack(spacing: -5) {
+                        Heading1TextWhite(text: "Welcome!")
+                            .padding()
+                        Heading1TextWhite(text: "Sign Up to KUTeach")
+                    }
 
                     VStack(spacing: -8) {
                         Toggle(isOn: $isLecturer) {
@@ -51,26 +54,27 @@ struct SignUpView: View {
                             .foregroundColor(.white)
                     }
 
-                    TextFieldDSWhite(text: $emailText, placeholder: "Enter email")
-                        .padding()
 
-                    TextFieldDSWhite(text: $usernameText, placeholder: "Enter username").padding()
 
-                    //TextFieldDSWhite(text: $passwordText, placeholder: "Enter password").padding()
+                    VStack(spacing: -5) {
+                        TextFieldDSWhite(text: $emailText, placeholder: "Enter email")
+                            .padding()
+                        TextFieldDSWhite(text: $usernameText, placeholder: "Enter username").padding()
+                        TextFieldDSWhite(text: $usernameText, placeholder: "Enter name and surname").padding()
+                        SecureFieldDSWhite(text: $passwordText, placeholder: "Enter password")
+                            .padding()
 
-                    SecureFieldDSWhite(text: $passwordText, placeholder: "Enter password")
-                        .padding()
-                    
-                    NavigationLink(destination: LoginView(), isActive: $viewModel.signupSuccessful) {
-                                            EmptyView()}
-                    ButtonDS(buttonTitle: "Sign Up", action: {
-                        viewModel.signUp(email: emailText, password: passwordText, username: usernameText, isLecturer: isLecturer)
-                    }).padding()
 
-                    NavigationLink(destination: LoginView()) {
-                        LinkText(text: "Already have an account? Log in!")
+                        NavigationLink(destination: LoginView(), isActive: $viewModel.signupSuccessful) {
+                            EmptyView()}
+                        ButtonDS(buttonTitle: "Sign Up", action: {
+                            viewModel.signUp(email: emailText, password: passwordText, username: usernameText, isLecturer: isLecturer,name: name)
+                        }).padding()
+
+                        NavigationLink(destination: LoginView()) {
+                            LinkText(text: "Already have an account? Log in!")
+                        }
                     }
-
 
                     Spacer()
                     Spacer()

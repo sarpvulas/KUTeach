@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LecturerProfileViewModel: ObservableObject {
+class LecturerProfilePageViewModel: ObservableObject {
 
 
 

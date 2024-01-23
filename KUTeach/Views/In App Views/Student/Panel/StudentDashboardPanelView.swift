@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct StudentPanelView: View {
+    var user: User
     var body: some View {
         TabView{
-            StudentProfilePageView()
+            StudentProfilePageView(user: user)
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
                 }
@@ -28,5 +29,5 @@ struct StudentPanelView: View {
 }
 
 #Preview {
-    StudentPanelView()
+    StudentPanelView(user: User(username:"test", email:"test", name: "test", isLecturer: false))
 }

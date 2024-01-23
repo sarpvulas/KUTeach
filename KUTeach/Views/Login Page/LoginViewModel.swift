@@ -14,6 +14,7 @@ class LoginViewModel: ObservableObject {
     @Published var loginSuccessful = false
     @Published var error: String?
     @Published var userType: UserType?
+    @Published var currentUser: User?
 
     let auth = Auth.auth()
     let db = Firestore.firestore()
@@ -21,13 +22,19 @@ class LoginViewModel: ObservableObject {
     var destinationView: AnyView {
         switch userType {
         case .student:
-            return AnyView(StudentProfilePageView())
+            if let user = currentUser {
+                return AnyView(StudentPanelView(user: user))
+            }
         case .lecturer:
-            return AnyView(LecturerProfilePageView())
+            if let user = currentUser {
+                return AnyView(LecturerPanelView(user: user))
+            }
         default:
             return AnyView(Text("Unknown user type"))
         }
+        return AnyView(Text("Loading..."))
     }
+
 
     func login(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
@@ -52,9 +59,16 @@ class LoginViewModel: ObservableObject {
         let ref = db.collection("users").document(userId)
         ref.getDocument { [weak self] (document, error) in
             if let document = document, document.exists {
-                let data = document.data()
-                let isLecturer = data?["isLecturer"] as? Bool ?? false
-                self?.userType = isLecturer ? .lecturer : .student
+                if let userData = document.data() {
+                    let isLecturer = userData["isLecturer"] as? Bool ?? false
+                    let username = userData["username"] as? String ?? ""
+                    let email = userData["email"] as? String ?? ""
+                    let name = userData["name"] as? String ?? ""
+                    self?.userType = isLecturer ? .lecturer : .student
+                    DispatchQueue.main.async {
+                        self?.currentUser = User(username: username, email: email, name: name, isLecturer: isLecturer)
+                    }
+                }
             } else {
                 self?.error = "User data not found."
             }

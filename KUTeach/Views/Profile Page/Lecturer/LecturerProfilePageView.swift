@@ -12,7 +12,7 @@ struct LecturerProfilePageView: View {
 
     @State private var oldPassword: String = ""
     @State private var newPassword: String = ""
-
+    var user: User
     var body: some View {
 
         ZStack {
@@ -94,5 +94,5 @@ struct LecturerProfilePageView: View {
 }
 
 #Preview {
-    LecturerProfilePageView()
+    LecturerProfilePageView(user: User(username:"test", email:"test", name: "test", isLecturer: true))
 }

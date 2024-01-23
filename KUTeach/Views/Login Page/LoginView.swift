@@ -45,9 +45,7 @@ struct LoginView: View {
                             SecureFieldDSWhite(text: $passwordText, placeholder: "Enter password")
                                 .padding()
 
-                            NavigationLink(destination: viewModel.destinationView, isActive: $viewModel.loginSuccessful) {
-                                                    EmptyView()
-                                                }
+                            NavigationLink(destination: viewModel.destinationView, isActive: $viewModel.loginSuccessful) {EmptyView()}
                             ButtonDS(buttonTitle: "Login", action: {
                                 viewModel.login(withEmail: emailText, password: passwordText)
                             })

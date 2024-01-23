@@ -11,6 +11,8 @@ struct StudentProfilePageView: View {
 
     @State private var oldPassword: String = ""
     @State private var newPassword: String = ""
+    @StateObject private var viewModel = StudentProfilePageViewModel()
+    var user: User
 
     var body: some View {
 
@@ -24,7 +26,7 @@ struct StudentProfilePageView: View {
                         .resizable()
                         .frame(width: 75, height: 75)
 
-                    Heading1TextBlack(text: "Name Surname")
+                    Heading1TextBlack(text: user.name)
                         .frame(width:200, height: 50)
                         .background(Color.white)
                         .foregroundColor(.white)
@@ -33,22 +35,18 @@ struct StudentProfilePageView: View {
                 }
 
                 HStack {
-                    BodyText(text: "Student username: ")
-
-
+                    BodyText(text: "Student username: \(user.username)")
                 }
                 .padding(.leading, -150)
                 .frame(width:350, height: 50)
-                    .background(Color.white)
-                    .foregroundColor(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(radius: 1, x:3, y:3)
+                .background(Color.white)
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 1, x:3, y:3)
 
 
                 HStack {
-                    BodyText(text: "email: ")
-
-
+                    BodyText(text: "Email: \(user.email)")
                 }.padding(.leading, -150)
                     .frame(width:350, height: 50)
                     .background(Color.white)
@@ -61,11 +59,11 @@ struct StudentProfilePageView: View {
 
                 }
                 .padding(.leading, -150)
-                    .frame(width:350, height: 50)
-                    .background(Color.white)
-                    .foregroundColor(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(radius: 1, x:3, y:3)
+                .frame(width:350, height: 50)
+                .background(Color.white)
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 1, x:3, y:3)
 
             }
             .padding(.top, -325)
@@ -73,19 +71,29 @@ struct StudentProfilePageView: View {
 
             VStack (spacing: 30){
                 Heading1TextBlack(text: "Change Password")
-                    .frame(width:200, height: 50)
+                    .frame(width:250, height: 50)
                     .background(Color.white)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(radius: 1, x:3, y:3)
 
-                    TextFieldDSBlack(text: $oldPassword, placeholder: "Enter old password")
+                TextFieldDSBlack(text: $oldPassword, placeholder: "Enter old password")
                     .frame(width: 300)
 
-                    TextFieldDSBlack(text: $oldPassword, placeholder: "Enter new password")
+                TextFieldDSBlack(text: $oldPassword, placeholder: "Enter new password")
                     .frame(width: 300)
+
+                ButtonDS(buttonTitle: "Change now!") {
+                    viewModel.changePassword(currentEmail: user.email, oldPassword: oldPassword, newPassword: newPassword) { success in
+                        if success {
+                            print("Password successfully updated")
+                        } else {
+                            print("Failed to update password: \(viewModel.error ?? "Unknown error")")
+                        }
+                    }
+                }
             }
-            .padding(.top, 300)
+            .padding(.top, 400)
 
         }
 
@@ -93,5 +101,5 @@ struct StudentProfilePageView: View {
 }
 
 #Preview {
-    StudentProfilePageView()
+    StudentProfilePageView(user: User(username:"test", email:"test", name: "test", isLecturer: false))
 }
