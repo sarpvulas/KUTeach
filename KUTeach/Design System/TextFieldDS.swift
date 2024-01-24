@@ -4,13 +4,10 @@
 //
 //  Created by Sarp Vulaş on 10.01.2024.
 //
-
 import SwiftUI
-
 struct TextFieldDSWhite: View {
     @Binding var text: String
     var placeholder: String
-
     var body: some View {
         TextField(placeholder, text: $text)
             .autocapitalization(.none)
@@ -25,11 +22,9 @@ struct TextFieldDSWhite: View {
             .accentColor(.white)
     }
 }
-
 struct TextFieldDSBlack: View {
     @Binding var text: String
     var placeholder: String
-
     var body: some View {
         TextField(placeholder, text: $text)
             .autocapitalization(.none)
@@ -44,9 +39,3 @@ struct TextFieldDSBlack: View {
             .accentColor(.black)
     }
 }
-
-
-
-
-
-

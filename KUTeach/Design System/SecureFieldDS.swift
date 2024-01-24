@@ -4,14 +4,11 @@
 //
 //  Created by Zeynep Aydın on 1/23/24.
 //
-
 import Foundation
 import SwiftUI
-
 struct SecureFieldDSWhite: View {
     @Binding var text: String
     var placeholder: String
-
     var body: some View {
         SecureField(placeholder, text: $text)
             .autocapitalization(.none)
@@ -29,7 +26,6 @@ struct SecureFieldDSWhite: View {
 struct SecureFieldDSBlack: View {
     @Binding var text: String
     var placeholder: String
-
     var body: some View {
         SecureField(placeholder, text: $text)
             .autocapitalization(.none)
@@ -44,4 +40,3 @@ struct SecureFieldDSBlack: View {
             .accentColor(.black)
     }
 }
-

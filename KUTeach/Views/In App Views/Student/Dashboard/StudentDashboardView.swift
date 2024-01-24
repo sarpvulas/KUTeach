@@ -4,25 +4,20 @@
 //
 //  Created by Sarp Vulaş on 13.01.2024.
 //
-
 import SwiftUI
 import FirebaseAuth
-
 struct StudentDashboardView: View {
     @StateObject var viewModel = StudentDashboardViewModel()
     @State private var searchTerm = ""
     @StateObject var subscriptionVM: StudentSubscriptionViewModel
-
     init() {
         let currentUserId = Auth.auth().currentUser?.uid ?? "defaultID"
         _subscriptionVM = StateObject(wrappedValue: StudentSubscriptionViewModel(userID: currentUserId))
     }
-
     var filteredSearchTerms: [Video] {
         guard !searchTerm.isEmpty else { return viewModel.videos }
         return viewModel.videos.filter { $0.videoName.localizedCaseInsensitiveContains(searchTerm) }
     }
-
     var body: some View {
             VStack {
                 NavigationView {
@@ -41,7 +36,6 @@ struct StudentDashboardView: View {
             }
         }
 }
-
 #Preview {
     StudentDashboardView().environmentObject(LoginViewModel())
 }

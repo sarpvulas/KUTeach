@@ -4,9 +4,7 @@
 //
 //  Created by Sarp Vulaş on 13.01.2024.
 //
-
 import SwiftUI
-
 struct Video: Identifiable {
     let id = UUID()
     let userID: String
@@ -20,6 +18,3 @@ struct Video: Identifiable {
     let videoName: String
     let videoDescription: String
 }
-
-
-

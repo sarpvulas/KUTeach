@@ -4,14 +4,11 @@
 //
 //  Created by Sarp Vulaş on 13.01.2024.
 //
-
 import SwiftUI
 import FirebaseAuth
-
 struct StudentPanelView: View {
     var user: User
     let currentUserId = Auth.auth().currentUser?.uid ?? "defaultID"
-
     var body: some View {
         TabView{
             StudentProfilePageView(user: user)
@@ -24,12 +21,11 @@ struct StudentPanelView: View {
                 }
             StudentSubscriptionView(subscriptionVM: StudentSubscriptionViewModel(userID: currentUserId))
                 .tabItem {
-                    Label("Subscription", systemImage: "cart")
+                    Label("Liked", systemImage: "heart")
                 }
         }.navigationBarBackButtonHidden(true)
     }
 }
-
 #Preview {
     StudentPanelView(user: User(username:"test", email:"test", name: "test", isLecturer: false)).environmentObject(LoginViewModel())
 }

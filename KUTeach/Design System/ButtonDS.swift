@@ -4,14 +4,10 @@
 //
 //  Created by Sarp Vulaş on 10.01.2024.
 //
-
 import SwiftUI
-
 struct ButtonDS: View {
-
     private let buttonTitle: String
     private let action: () -> Void
-
     init(
         buttonTitle: String,
         action: @escaping () -> Void
@@ -19,7 +15,6 @@ struct ButtonDS: View {
         self.buttonTitle = buttonTitle
         self.action = action
     }
-
     var body: some View {
         Button(action: action) {
             Text(buttonTitle)
@@ -34,13 +29,9 @@ struct ButtonDS: View {
         )
     }
 }
-
 struct ButtonView: View {
-
     var title: String
-
     var color: Color
-
 var body: some View {
 Text(title)
     .bold()

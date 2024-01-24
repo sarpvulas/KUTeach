@@ -4,20 +4,16 @@
 //
 //  Created by Zeynep Aydın on 1/24/24.
 //
-
 import Foundation
 import FirebaseFirestore
-
 class StudentDashboardViewModel: ObservableObject {
     @Published var videos: [Video] = []
-
     func fetchAllVideos() {
         Firestore.firestore().collection("videos").getDocuments { [weak self] (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
                 return
             }
-
             self?.videos = querySnapshot?.documents.compactMap { document -> Video? in
                 let data = document.data()
                 return Video(
@@ -35,7 +31,6 @@ class StudentDashboardViewModel: ObservableObject {
             } ?? []
         }
     }
-
     private func formatDate(timestamp: Timestamp?) -> String {
         guard let timestamp = timestamp else { return "" }
         let date = timestamp.dateValue()
@@ -45,4 +40,3 @@ class StudentDashboardViewModel: ObservableObject {
         return dateFormatter.string(from: date)
     }
 }
-

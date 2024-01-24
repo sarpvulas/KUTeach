@@ -4,25 +4,20 @@
 //
 //  Created by Zeynep Aydın on 1/23/24.
 //
-
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 import SwiftUI
-
 class LoginViewModel: ObservableObject {
     @Published var loginSuccessful = false
     @Published var error: String?
     @Published var userType: UserType?
     @Published var currentUser: User?
-
     let auth = Auth.auth()
     let db = Firestore.firestore()
-
     var currentUserId: String? {
         return Auth.auth().currentUser?.uid
     }
-
     var destinationView: AnyView {
         switch userType {
         case .student:
@@ -38,8 +33,6 @@ class LoginViewModel: ObservableObject {
         }
         return AnyView(Text("Loading..."))
     }
-
-
     func login(withEmail email: String, password: String) {
         self.error = nil
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
@@ -59,7 +52,6 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
-
     private func fetchUserType(userId: String) {
         self.error = nil
         let ref = db.collection("users").document(userId)
@@ -80,8 +72,6 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
-
-
     func changePassword(currentEmail: String, oldPassword: String, newPassword: String, completion: @escaping (Bool) -> Void) {
         self.error = nil
         guard !oldPassword.isEmpty, !newPassword.isEmpty else {
@@ -89,7 +79,6 @@ class LoginViewModel: ObservableObject {
             completion(false)
             return
         }
-
         if let currentUser = Auth.auth().currentUser {
             currentUser.reauthenticate(with: EmailAuthProvider.credential(withEmail: currentEmail, password: oldPassword)) { result, error in
                 if let error = error {
@@ -97,7 +86,6 @@ class LoginViewModel: ObservableObject {
                     completion(false)
                     return
                 }
-
                 currentUser.updatePassword(to: newPassword) { error in
                     if let error = error {
                         self.error = "Password update error: \(error.localizedDescription)"
@@ -112,7 +100,6 @@ class LoginViewModel: ObservableObject {
             completion(false)
         }
     }
-
     func logout(completion: @escaping (Bool) -> Void) {
         self.error = nil
         do {
@@ -124,11 +111,8 @@ class LoginViewModel: ObservableObject {
             completion(false)
         }
     }
-
 }
-
 enum UserType {
     case student
     case lecturer
 }
-

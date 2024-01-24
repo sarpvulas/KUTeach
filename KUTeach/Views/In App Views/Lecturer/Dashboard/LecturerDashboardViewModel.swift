@@ -4,12 +4,10 @@
 //
 //  Created by Zeynep Aydın on 1/24/24.
 //
-
 import Foundation
 import FirebaseFirestore
 class LecturerDashboardViewModel: ObservableObject {
     @Published var videos: [Video] = []
-
     func fetchVideosForLecturer(lecturerID: String) {
         Firestore.firestore().collection("videos").whereField("userID", isEqualTo: lecturerID).getDocuments { [weak self] (querySnapshot, err) in
             if let err = err {
@@ -33,7 +31,6 @@ class LecturerDashboardViewModel: ObservableObject {
             }
         }
     }
-
     private func formatDate(timestamp: Timestamp?) -> String {
             guard let timestamp = timestamp else { return "" }
             let date = timestamp.dateValue()
@@ -42,5 +39,4 @@ class LecturerDashboardViewModel: ObservableObject {
             dateFormatter.timeStyle = .short
             return dateFormatter.string(from: date)
         }
-
 }

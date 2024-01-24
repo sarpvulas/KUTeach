@@ -1,15 +1,11 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
-
 class SignUpViewModel: ObservableObject {
-
     @Published var error: String?
     @Published var signupSuccessful = false
-
     let auth = Auth.auth()
     let db = Firestore.firestore()
-
     func signUp(email: String, password: String, username: String, isLecturer: Bool, name: String) {
         self.error = nil
         auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
@@ -28,7 +24,6 @@ class SignUpViewModel: ObservableObject {
             }
         }
     }
-    
     private func saveUserToDatabase(userId: String, email: String, username: String, isLecturer: Bool, name: String) {
         self.error = nil
         let ref = db.collection("users")

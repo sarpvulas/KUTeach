@@ -4,23 +4,17 @@
 //
 //  Created by Sarp Vulaş on 13.01.2024.
 //
-
 import SwiftUI
-
 struct VideoCellView: View {
-
     var video: Video
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Lecture: \(video.lectureName)") 
-
+            Text("Lecture: \(video.lectureName)")
             Text(video.videoDescription)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
         HStack {
-
-
             VStack (alignment: .leading, spacing: 5){
                 Text(video.videoName)
                     .fontWeight(.semibold)
@@ -31,23 +25,6 @@ struct VideoCellView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-
         }
-
-
-
     }
 }
-
-//#Preview {
-//    let sampleVideo = Video(
-//            userID: "someUserID", // Example userID
-//            imageName: "exampleImage", // Example image name
-//            title: "Example Video Title",
-//            description: "This is a description for the example video.",
-//            viewCount: 123,
-//            uploadDate: "January 24, 2024",
-//            url: URL(string: "https://example.com/video")! // Example URL
-//        )
-//        VideoCellView(video: sampleVideo)
-//    }

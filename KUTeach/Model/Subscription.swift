@@ -4,7 +4,6 @@
 //
 //  Created by Zeynep Aydın on 1/24/24.
 //
-
 import Foundation
 struct Subscription: Identifiable {
     let id: String
