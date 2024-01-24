@@ -1,16 +1,16 @@
 //
-//  VideoView.swift
+//  LecturerVideoView.swift
 //  KUTeach
 //
-//  Created by Sarp Vulaş on 13.01.2024.
+//  Created by Zeynep Aydın on 1/24/24.
 //
 
+import Foundation
 import SwiftUI
 
-struct VideoView: View {
+struct LecturerVideoView: View {
 
     var video: Video
-
     var body: some View {
         VStack (spacing: 10){
             Image(video.imageName)
@@ -42,7 +42,6 @@ struct VideoView: View {
                 .padding(.horizontal, 20)
 
             Spacer()
-
             Link(destination: video.url, label: {
                 ButtonView(title: "Watch Now", color: Color.red)
             })
@@ -55,7 +54,16 @@ struct VideoView: View {
     }
 }
 
-#Preview {
-    VideoView(video: VideoList.topTen.first!)
-}
+//#Preview {
+//    let sampleVideo = Video(
+//            userID: "someUserID", // Example userID
+//            imageName: "exampleImage", // Example image name
+//            title: "Example Video Title",
+//            description: "This is a description for the example video.",
+//            viewCount: 123,
+//            uploadDate: "January 24, 2024",
+//            url: URL(string: "https://example.com/video")! // Example URL
+//        )
+//        VideoView(video: sampleVideo)
+//    }
 

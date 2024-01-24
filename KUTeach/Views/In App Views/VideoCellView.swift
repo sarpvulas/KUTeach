@@ -10,9 +10,15 @@ import SwiftUI
 struct VideoCellView: View {
 
     var video: Video
-
     var body: some View {
-
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Lecture: \(video.lectureName)") 
+            Text(video.title)
+                .fontWeight(.semibold)
+            Text(video.description)
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+        }
         HStack {
             Image(video.imageName)
                 .resizable()
@@ -31,12 +37,23 @@ struct VideoCellView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
+
         }
+
 
 
     }
 }
 
-#Preview {
-    VideoCellView(video: VideoList.topTen.first!)
-}
+//#Preview {
+//    let sampleVideo = Video(
+//            userID: "someUserID", // Example userID
+//            imageName: "exampleImage", // Example image name
+//            title: "Example Video Title",
+//            description: "This is a description for the example video.",
+//            viewCount: 123,
+//            uploadDate: "January 24, 2024",
+//            url: URL(string: "https://example.com/video")! // Example URL
+//        )
+//        VideoCellView(video: sampleVideo)
+//    }

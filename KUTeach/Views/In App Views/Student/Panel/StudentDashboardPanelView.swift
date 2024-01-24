@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct StudentPanelView: View {
     var user: User
+    let currentUserId = Auth.auth().currentUser?.uid ?? "defaultUserID"
+
     var body: some View {
         TabView{
             StudentProfilePageView(user: user)
@@ -19,7 +22,7 @@ struct StudentPanelView: View {
                 .tabItem {
                     Label("Dashboard", systemImage: "list.dash.header.rectangle")
                 }
-            StudentSubscriptionView()
+            StudentSubscriptionView(subscriptionVM: StudentSubscriptionViewModel(userID: currentUserId))
                 .tabItem {
                     Label("Subscription", systemImage: "cart")
                 }

@@ -19,6 +19,10 @@ class LoginViewModel: ObservableObject {
     let auth = Auth.auth()
     let db = Firestore.firestore()
 
+    var currentUserId: String? {
+        return Auth.auth().currentUser?.uid
+    }
+
     var destinationView: AnyView {
         switch userType {
         case .student:

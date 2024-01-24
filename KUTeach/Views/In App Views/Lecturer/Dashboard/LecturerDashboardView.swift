@@ -10,14 +10,10 @@ import SwiftUI
 
 struct LecturerDashboardView: View {
 
-    var videos: [Video] = VideoList.topTen
-
+    @StateObject var viewModel = LecturerDashboardViewModel()
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var searchTerm = ""
 
-    var filteredSearchTerms: [Video] {
-        guard !searchTerm.isEmpty else {return videos}
-        return videos.filter {$0.title.localizedCaseInsensitiveContains(searchTerm)}
-    }
 
     var body: some View {
 
@@ -25,16 +21,25 @@ struct LecturerDashboardView: View {
 
             NavigationView {
                 List(filteredSearchTerms, id: \.id) { video in
-                    NavigationLink(destination: VideoView(video: video), label: {
+                    NavigationLink(destination: LecturerVideoView(video: video), label: {
                         VideoCellView(video: video)
                     })
 
-                }.navigationTitle("Courses")
+                }.navigationTitle("My Courses")
                     .navigationBarTitleDisplayMode(.inline)
                     .searchable(text: $searchTerm)
             }
+        }.onAppear {
+            if let lecturerID = loginViewModel.currentUserId {
+                viewModel.fetchVideosForLecturer(lecturerID: lecturerID)
+            }
         }
     }
+
+    var filteredSearchTerms: [Video] {
+            guard !searchTerm.isEmpty else {return viewModel.videos}
+            return viewModel.videos.filter {$0.title.localizedCaseInsensitiveContains(searchTerm)}
+        }
 }
 
 #Preview {

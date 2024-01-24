@@ -63,50 +63,40 @@ struct UploadLectureView: View {
 
                         }
 
-                            HStack(spacing: 20) {
+                        HStack(spacing: 20) {
 
-                                Button(action: {
-                                    
-                                    Task {
+                            Button(action: {
 
-                                        do {
-                                            try await videoState = viewModel.uploadVideo()
-                                        }
-                                        catch {
-                                                print("error")
-                                        }
+                                Task {
 
+                                    do {
+                                        try await videoState = viewModel.uploadVideo()
+                                    }
+                                    catch {
+                                        print("error")
                                     }
 
-                                }) {
-                                    
-                                    ButtonView(title: "Upload!", color: Color.blue)
-                                        .listRowBackground(Color.clear)
                                 }
 
-                                ProgressView()
+                            }) {
 
+                                ButtonView(title: "Upload!", color: Color.blue)
+                                    .listRowBackground(Color.clear)
                             }
 
-
-
+                            ProgressView()
 
                         }
-
-
                     }
-                    Spacer()
-                    Spacer()
                 }
-
+                Spacer()
+                Spacer()
             }
-
-
-
 
         }
     }
+}
 
-    #Preview {
-        UploadLectureView(viewModel: UploadLectureViewModel())
-    }
+#Preview {
+    UploadLectureView(viewModel: UploadLectureViewModel())
+}
