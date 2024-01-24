@@ -14,13 +14,13 @@ struct StudentVideoView: View {
     @ObservedObject var subscriptionVM: StudentSubscriptionViewModel
     var body: some View {
         VStack (spacing: 10){
-            Image(video.imageName)
+            Image(video.imageName ?? "image not given")
                 .resizable()
                 .scaledToFit()
                 .frame(height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
 
-            Text(video.title)
+            Text(video.videoName)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
@@ -28,7 +28,7 @@ struct StudentVideoView: View {
                 .padding(.horizontal, 20)
 
             HStack {
-                Label("\(video.viewCount)", systemImage: "eye.fill")
+                Label("\(video.viewCount!)", systemImage: "eye.fill")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
 
@@ -37,7 +37,7 @@ struct StudentVideoView: View {
                     .foregroundColor(.secondary)
             }
 
-            Text(video.description)
+            Text(video.videoDescription)
                 .font(.footnote)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
@@ -53,21 +53,5 @@ struct StudentVideoView: View {
             Spacer()
 
         }
-
-
     }
 }
-
-//#Preview {
-//    let sampleVideo = Video(
-//            userID: "someUserID", // Example userID
-//            imageName: "exampleImage", // Example image name
-//            title: "Example Video Title",
-//            description: "This is a description for the example video.",
-//            viewCount: 123,
-//            uploadDate: "January 24, 2024",
-//            url: URL(string: "https://example.com/video")! // Example URL
-//        )
-//        VideoView(video: sampleVideo)
-//    }
-

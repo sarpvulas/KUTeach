@@ -34,7 +34,7 @@ class LoginViewModel: ObservableObject {
                 return AnyView(LecturerPanelView(user: user))
             }
         default:
-            return AnyView(Text("Unknown user type"))
+            return AnyView(Text("Loading..."))
         }
         return AnyView(Text("Loading..."))
     }

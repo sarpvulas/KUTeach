@@ -14,13 +14,13 @@ struct StudentDashboardView: View {
     @StateObject var subscriptionVM: StudentSubscriptionViewModel
 
     init() {
-        let currentUserId = Auth.auth().currentUser?.uid ?? "defaultUserID"
+        let currentUserId = Auth.auth().currentUser?.uid ?? "defaultID"
         _subscriptionVM = StateObject(wrappedValue: StudentSubscriptionViewModel(userID: currentUserId))
     }
 
     var filteredSearchTerms: [Video] {
         guard !searchTerm.isEmpty else { return viewModel.videos }
-        return viewModel.videos.filter { $0.title.localizedCaseInsensitiveContains(searchTerm) }
+        return viewModel.videos.filter { $0.videoName.localizedCaseInsensitiveContains(searchTerm) }
     }
 
     var body: some View {

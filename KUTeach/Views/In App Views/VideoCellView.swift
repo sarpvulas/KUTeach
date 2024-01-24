@@ -13,22 +13,16 @@ struct VideoCellView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Lecture: \(video.lectureName)") 
-            Text(video.title)
-                .fontWeight(.semibold)
-            Text(video.description)
+
+            Text(video.videoDescription)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
         HStack {
-            Image(video.imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 70)
-                .clipShape(RoundedRectangle(cornerRadius: 6.0))
-                .padding(.vertical, 4)
+
 
             VStack (alignment: .leading, spacing: 5){
-                Text(video.title)
+                Text(video.videoName)
                     .fontWeight(.semibold)
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                     .minimumScaleFactor(0.5)

@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct StudentPanelView: View {
     var user: User
-    let currentUserId = Auth.auth().currentUser?.uid ?? "defaultUserID"
+    let currentUserId = Auth.auth().currentUser?.uid ?? "defaultID"
 
     var body: some View {
         TabView{

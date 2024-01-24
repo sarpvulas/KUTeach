@@ -46,10 +46,12 @@ class UploadLectureViewModel: ObservableObject {
             "uploadDate": Date().timeIntervalSince1970,
         ]
 
-        try await Firestore.firestore().collection("videos").document().setData(videoDocumentData)
+        let sanitizedVideoName = videoName.replacingOccurrences(of: "/", with: "_")
+        try await Firestore.firestore().collection("videos").document(sanitizedVideoName).setData(videoDocumentData)
 
         return true
     }
+
 
 
     func fetchVideos() async throws {

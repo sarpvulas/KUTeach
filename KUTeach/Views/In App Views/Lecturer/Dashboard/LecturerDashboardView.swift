@@ -38,7 +38,7 @@ struct LecturerDashboardView: View {
 
     var filteredSearchTerms: [Video] {
             guard !searchTerm.isEmpty else {return viewModel.videos}
-            return viewModel.videos.filter {$0.title.localizedCaseInsensitiveContains(searchTerm)}
+            return viewModel.videos.filter {$0.videoName.localizedCaseInsensitiveContains(searchTerm)}
         }
 }
 

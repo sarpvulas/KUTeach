@@ -10,4 +10,5 @@ struct Subscription: Identifiable {
     let id: String
     let userID: String
     let videoID: String
+    let videoName: String
 }

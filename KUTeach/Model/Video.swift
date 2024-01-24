@@ -10,10 +10,10 @@ import SwiftUI
 struct Video: Identifiable {
     let id = UUID()
     let userID: String
-    let imageName: String
-    let title: String
-    let description: String
-    let viewCount: Int
+    let imageName: String?
+    let title: String?
+    let description: String?
+    let viewCount: Int?
     let uploadDate: String
     let url: URL
     let lectureName: String
